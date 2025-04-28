@@ -44,7 +44,7 @@ function init() {
 function loadGLTF(modelName) {
     const loader = new THREE.GLTFLoader();
     loader.load(
-        `/static/models/${modelName}.glb`,
+        `./static/models/${modelName}.glb`,
         (gltf) => {
             model = gltf.scene;
             scene.add(model);
@@ -95,7 +95,7 @@ function loadGLTF(modelName) {
 function load3DS(modelName) {
     // Using 3DS Loader
     const loader = new THREE.TDSLoader();
-    loader.setPath('/static/models/'); // Set the basic path for the model and texture
+    loader.setPath('./static/models/'); // Set the basic path for the model and texture
     loader.load(`${modelName}.3ds`,
         (object) => {
             model = object;
@@ -145,9 +145,9 @@ function changeTexture(texturePath) {
 
 let toggleCount = 0;
 const toggleTextures = [
-    '/static/models/can1/Original_UV.png',
-    '/static/models/can1/Soda_Texture_0.png',
-    '/static/models/can1/Soda_Texture_1.png'
+    './static/models/can1/Original_UV.png',
+    './static/models/can1/Soda_Texture_0.png',
+    './static/models/can1/Soda_Texture_1.png'
 ];
 function toggleTexture() {
     if (toggleCount >= toggleTextures.length) {
