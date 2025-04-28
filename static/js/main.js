@@ -280,3 +280,4 @@ function toggleLight() {
 
 init();
 animate();
+loadModel('can1', '3ds');
